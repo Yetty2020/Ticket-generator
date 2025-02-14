@@ -27,6 +27,11 @@ const selectedTicket = useStoredTicket();
         <p>📍 04 Rumens road, Ikoyi, Lagos</p>
         <p>📅 March 15, 2025 | 7:00 PM</p>
         </header>
+
+        <div>
+            
+        </div>
+
         
         
 

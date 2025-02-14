@@ -25,7 +25,7 @@ export default function UploadPicture() {
     type="hidden" 
     {...formRules.avatarUrl} 
   />
-  {errors.avatarUrl && <p className="error">{errors.avatarUrl.message}</p>}
+  
   </div>
   <div className='w-full bg-imagebg-color'>
   {imagePreview && (

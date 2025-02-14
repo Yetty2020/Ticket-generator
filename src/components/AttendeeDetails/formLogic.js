@@ -193,7 +193,7 @@ useEffect(() => {
     },
     avatarUrl: {
       ...register("avatarUrl", {
-        required: "Image is required",
+        
         onChange: handleInputChange,
         tabIndex: 0
       })
