@@ -32,9 +32,9 @@ const AttendeeForm = () => {
   const navigate = useNavigate()
 
   return (
-    <form onSubmit={handleSubmit(handleFormSubmit)} className='flex flex-col gap-6 px-[24px] border border-border-color rounded-[24px]'>
+    <form onSubmit={handleSubmit(handleFormSubmit)} className='flex flex-col gap-6 px-[24px] lg:border lg:border-border-color rounded-[24px] py-[24px]'>
       <div className="flex flex-col gap-[8px] text-white">
-      <label htmlFor="name">Enter Your Name*:</label>
+      <label htmlFor="name">Enter Your Name:</label>
         <input 
           type="text"
           placeholder="Enter your name"
@@ -46,7 +46,7 @@ const AttendeeForm = () => {
       </div>
 
       <div className="flex flex-col gap-[8px] text-white">
-      <label htmlFor="email">Email*:</label>
+      <label htmlFor="email">Email:</label>
         <input 
           type="email"
           placeholder="Enter your email"
@@ -59,7 +59,7 @@ const AttendeeForm = () => {
       </div>
       
       <div className="flex flex-col gap-[8px] text-white">
-        <label htmlFor="">special Message?</label>
+        <label htmlFor="">Special Message?</label>
         <textarea
           placeholder="You have a special message? Leave it."
           {...formRules.message}

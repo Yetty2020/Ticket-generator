@@ -15,7 +15,8 @@ export default {
       'imagebg-color':'#02191D',
       'ticketbg-color': '#71A7AF',
       'progressbar-color':'#24A0B5',
-      'inactiveprogessbar-color':'#0E464F'
+      'inactiveprogessbar-color':'#0E464F',
+         
       
 
       },

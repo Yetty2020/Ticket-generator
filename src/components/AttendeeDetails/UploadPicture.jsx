@@ -44,7 +44,7 @@ const ImageUpload = () => {
 };
 
   return (
-    <div className="relative w-[300px] h-[300px] border-2 border-dashed border-gray-300 rounded-lg overflow-hidden mb-4">
+    <div className="relative w-[300px] h-[300px] border-4 border-dashed border-border-color rounded-lg overflow-hidden mb-4 mx-auto">
       <input
         type="file"
         accept="image/*"
