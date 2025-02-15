@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ProgressBar from "./components/Fixed/ProgressBar.jsx";
+// import ProgressBar from "./components/Fixed/ProgressBar.jsx";
 import Navbar from "./components/Fixed/Navbar.jsx";
 import TicketSelectionHero from "./components/TicketSelection/Hero.jsx";
 import AttendeeDetailsHero from "./components/AttendeeDetails/Hero.jsx";
@@ -12,7 +12,7 @@ export default function App() {
       
 
       <BrowserRouter>
-      <ProgressBar />
+      {/* <ProgressBar /> */}
         <Routes>
           <Route path="/" element={<TicketSelectionHero />} />
           <Route

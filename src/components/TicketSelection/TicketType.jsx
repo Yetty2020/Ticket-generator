@@ -6,9 +6,9 @@ export default function TicketType() {
   }
 
   return (
-   <section className="flex flex-col lg:items-center text-white">
+   <section className="flex flex-col lg:items-center text-white gap-4 mb-4">
    <div className="w-full h-1 rounded-sm"></div>
-    <h4 className="self-start text-base">Select Ticket Type:</h4>
+    <h4 className="self-start text-lg">Select Ticket Type:</h4>
     <div className="flex flex-col lg:flex-row lg:justify-between lg:w-full border rounded-[24px] border-border-color lg:p-[24px] lg:flex-start gap-6 p-[16px]">{TicketTypeDetails.map((item, index)=>(
         <button 
           type="button" 

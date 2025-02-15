@@ -7,7 +7,7 @@ export default function TicketNumber() {
     setSelected(event.target.value);
   };
   return (
-    <section className="flex flex-col text-white">
+    <section className="flex flex-col text-white gap-4 mb-4">
       <h4 className= "self-start text-base">Number of Tickets:</h4>
       <div className=" ">
         <select value={selected} onChange={handleChange} className="w-full bg-primary-color p-[12px] rounded-[12px] border border-border-color">

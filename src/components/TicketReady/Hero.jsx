@@ -6,7 +6,7 @@ export default function Hero() {
   
 
   return (
-    <div className="">
+    <div className="px-[20px] py-[48px]">
     
     <TicketShape/>
     <FooterButtons />

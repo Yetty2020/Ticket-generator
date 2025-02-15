@@ -21,7 +21,7 @@ const ProgressBar = () => {
       case '/':
         return 'Enter Your Details';
       case '/AttendeeDetails/Hero':
-        return 'Choose Your Ticket';
+        return 'Attendee Details';
       case '/TicketReady/Hero':
         return 'Get Your Ticket';
       default:
@@ -47,8 +47,8 @@ const ProgressBar = () => {
             >
               
               {location.pathname === step.path && (
-                <span className="text-sm whitespace-nowrap">{step.label}</span>
-                
+                <span className="text-lg whitespace-nowrap font-Roboto">{step.label}</span>
+
               )}
             </div>
           ))}

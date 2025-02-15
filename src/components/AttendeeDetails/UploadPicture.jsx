@@ -44,7 +44,7 @@ const ImageUpload = () => {
 };
 
   return (
-    <div className="relative w-[300px] h-[300px] border-2 border-dashed border-gray-300 rounded-lg overflow-hidden">
+    <div className="relative w-[300px] h-[300px] border-2 border-dashed border-gray-300 rounded-lg overflow-hidden mb-4">
       <input
         type="file"
         accept="image/*"
@@ -83,6 +83,7 @@ const ImageUpload = () => {
             htmlFor="imageInput"
             className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
           >
+          
             <span className="text-white">Upload your picture</span>
           </label>
         </div>

@@ -2,7 +2,7 @@ import { GrLocationPin } from "react-icons/gr";
 
 export default function EventDetails() {
   return (
-    <section className="flex flex-col items-center justify-content border border-border-color rounded-[24px] text-white py-[16px] lg:py-[24px]">
+    <section className="flex flex-col items-center justify-content border border-border-color rounded-[24px] text-white py-[16px] lg:py-[24px] mb-4 ">
 
 
     <div className="flex flex-col items-center justify-content px-[24px] gap-[10px]">
