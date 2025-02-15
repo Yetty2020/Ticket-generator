@@ -14,7 +14,7 @@ export default function Navbar() {
    <img src={two} alt="" />
    </div>
    <div className="lg:flex gap-[16px] hidden">
-       <a href="">Events</a>
+       <a href="/">Events</a>
        <a href="">About</a>
        <a href="">Ticket</a>
        <a href="">My Project</a>

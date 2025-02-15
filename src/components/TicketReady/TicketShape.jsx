@@ -1,5 +1,7 @@
 const TicketShape = () => {
 
+    const imageUrl = localStorage.getItem('imageUrl');
+
     const formData = JSON.parse(localStorage.getItem('formData'))
   const useStoredTicket = () => {
     try {
@@ -17,6 +19,9 @@ const selectedTicket = useStoredTicket();
     }
 
     
+
+
+    
     return (
       <div className="flex flex-col h-[600px] lg:w-[320px] m-4 border border-border-color relative bg-ticketbg-color mx-auto">
         {/* Main Content Section (70% height) */}
@@ -28,7 +33,12 @@ const selectedTicket = useStoredTicket();
         <p>📅 March 15, 2025 | 7:00 PM</p>
         </header>
 
-        <div>
+        <div className="mx-auto">
+        <img 
+        src={imageUrl} 
+        alt="Uploaded ticket" 
+        className="w-full h-full object-cover "
+      />
             
         </div>
 
@@ -37,17 +47,17 @@ const selectedTicket = useStoredTicket();
 
         <div className="border border-border-color flex flex-col gap-3 p-[4px]">
             <div className="flex justify-between flex-1">
-                <div className="flex flex-col w-1/2">
+                <div className="flex flex-col w-1/2 border-r border-b border-border-color">
                     <p>Enter Your Name:</p>
                     <p>{formData.name}</p>
                 </div>
-                <div className="flex flex-col w-1/2">
+                <div className="flex flex-col w-1/2 border-b border-border-color">
                     <p>Enter your Email</p>
                     <p className="w-1/2">{formData.email}</p>
                 </div>
             </div>
             <div className="flex justify-between flex-1">
-            <div className="flex flex-col">
+            <div className="flex flex-col border-r border-b border-border-color">
                     <p>Ticket Type:</p>
                     <p>{selectedTicket.price}</p>
                 </div>

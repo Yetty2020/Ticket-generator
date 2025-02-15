@@ -13,7 +13,9 @@ export default {
       'hover-color': '#2C545B',
       'selected-color': '#12464E',
       'imagebg-color':'#02191D',
-      'ticketbg-color': '#71A7AF'
+      'ticketbg-color': '#71A7AF',
+      'progressbar-color':'#24A0B5',
+      'inactiveprogessbar-color':'#0E464F'
       
 
       },

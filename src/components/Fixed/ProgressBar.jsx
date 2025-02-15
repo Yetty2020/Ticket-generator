@@ -1,6 +1,3 @@
-
-
-
 import { useLocation } from 'react-router-dom';
 
 const ProgressBar = () => {
@@ -10,7 +7,7 @@ const ProgressBar = () => {
     switch(location.pathname) {
       case '/':
         return 33;
-      case '/TicketSelection/Hero':
+      case '/AttendeeDetails/Hero':
         return 66;
       case '/TicketReady/Hero':
         return 100;
@@ -19,39 +16,51 @@ const ProgressBar = () => {
     }
   };
 
-  const steps = [
-    { label: 'Details', path: '/' },
-    { label: 'Preview', path: '/TicketSelection/Hero' },
-    { label: 'Download', path: '/TicketReady/Hero' }
-  ];
+  const getCurrentLabel = () => {
+    switch(location.pathname) {
+      case '/':
+        return 'Enter Your Details';
+      case '/AttendeeDetails/Hero':
+        return 'Choose Your Ticket';
+      case '/TicketReady/Hero':
+        return 'Get Your Ticket';
+      default:
+        return '';
+    }
+  };
 
+  const steps = [
+    { label: getCurrentLabel(), path: '/' },
+    { label: getCurrentLabel(), path: '/AttendeeDetails/Hero' },
+    { label: getCurrentLabel(), path: '/TicketReady/Hero' }
+  ];
 
   return (
     <div className="w-full max-w-2xl mx-auto px-4 mb-8">
       <div className="relative pt-4">
-        <div className="w-full h-2 bg-gray-200 rounded-full">
-          <div 
-            className="h-full bg-blue-500 rounded-full transition-all duration-500 ease-in-out"
-            style={{ width: `${getProgress()}%` }}
-          />
-        </div>
-        
-        <div className="flex justify-between mt-4">
+      <div className="flex justify-between mt-4">
           {steps.map((step, index) => (
             <div 
               key={index}
               className={`flex flex-col items-center relative
-                ${location.pathname === step.path ? 'text-[#1F2937] font-bold' : 'text-gray-500'}`}
+                ${location.pathname === step.path ? 'text-white font-bold' : 'text-gray-500'}`}
             >
-              <div className={`w-6 h-6 rounded-full mb-2 flex items-center justify-center border-2
-                ${location.pathname === step.path ? 'bg-[#1F2937] border-[#1F2937]' : 'bg-white border-gray-300'}`}
-              >
-                <span className={location.pathname === step.path ? 'text-white' : ''}>{index + 1}</span>
-              </div>
-              <span className="text-sm whitespace-nowrap">{step.label}</span>
+              
+              {location.pathname === step.path && (
+                <span className="text-sm whitespace-nowrap">{step.label}</span>
+                
+              )}
             </div>
           ))}
         </div>
+        <div className="w-full h-2 bg-inactiveprogressbar-color rounded-full">
+          <div 
+            className="h-full bg-progressbar-color rounded-full transition-all duration-500 ease-in-out"
+            style={{ width: `${getProgress()}%` }}
+          />
+        </div>
+        
+        
       </div>
     </div>
   );
