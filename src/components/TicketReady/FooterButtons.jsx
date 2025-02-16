@@ -20,7 +20,7 @@ export default function FooterButtons() {
 //     </div>
 //   )
   return (
-    <div className="flex flex-col lg:flex-row justify-between flex-1 text-white gap-6">
+    <div className="flex flex-col lg:flex-row justify-between flex-1 text-white gap-6 lg:px-[40px]">
     <button type="button" onClick={()=> {
         handleBookAnother();
         resetImage();

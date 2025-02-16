@@ -19,7 +19,7 @@ const TicketShape = () => {
 const selectedTicket = useStoredTicket();
     
     if (!selectedTicket) {
-        return <div>Please select a ticket first</div>;
+        return <div className="text-white">Please select a ticket first</div>;
     }
 
     
@@ -27,7 +27,7 @@ const selectedTicket = useStoredTicket();
 
     
     return (
-      <div className=" mx-auto relative w-fit mx-auto text-white ">
+      <div className=" mx-auto relative w-fit mx-auto text-white mb-8  ">
 
       <img src={ticket} alt="" className="w-[400px]"/>
       <div className=" absolute inset-0  top-[20px] bottom-[140px] lg:top-[40px] lg:bottom-[180px] px-[20px]">

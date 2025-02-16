@@ -7,7 +7,7 @@ import TicketReadyHero from "./components/TicketReady/Hero.jsx";
 
 export default function App() {
   return (
-    <div>
+    <div className="bg-gradient-to-b from-primary-color via-primary-color to-gradientbg-color min-h-screen">
       <Navbar />
       
 
