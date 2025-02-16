@@ -1,8 +1,10 @@
 import ticket from "../../../public/images/ticket.svg"
+import user from "../../../public/images/user.svg"
+
 
 const TicketShape = () => {
 
-    const imageUrl = localStorage.getItem('imageUrl');
+    const imageUrl = localStorage.getItem('imageUrl') || user;
 
     const formData = JSON.parse(localStorage.getItem('formData'))
   const useStoredTicket = () => {
@@ -54,17 +56,17 @@ const selectedTicket = useStoredTicket();
                     <p>Enter Your Name:</p>
                     <p>{formData.name}</p>
                 </div>
-                <div className="flex flex-col gap-3 w-1/2 ">
+                <div className="flex flex-col gap-3 w-1/2 flex-start ">
                     <p>Enter your Email</p>
                     <p className="w-1/2">{formData.email}</p>
                 </div>
             </div>
             <div className="flex justify-between flex-1 border-t border-border-color pt-[4px]">
-            <div className="flex flex-col ">
+            <div className="flex flex-col flex-1 ">
                     <p>Ticket Type:</p>
                     <p>{selectedTicket.price}</p>
                 </div>
-                <div>
+                <div className="flex flex-col flex-1 ">
                     <p>Ticket for:</p>
                     <p>1</p>
                 </div>

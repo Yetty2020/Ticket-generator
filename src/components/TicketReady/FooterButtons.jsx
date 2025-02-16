@@ -6,6 +6,11 @@ export default function FooterButtons() {
     const navigate = useNavigate();
     const {handleBookAnother} = useFormLogic();
 
+    const resetImage = () =>{
+      localStorage.removeItem('imageUrl')
+      window.location.reload();
+    }
+
     // turn (
     // <div>
     // <button type="button" onClick={()=>navigate("/")}>Cancel</button>
@@ -18,6 +23,7 @@ export default function FooterButtons() {
     <div className="flex flex-col lg:flex-row justify-between flex-1 text-white gap-6">
     <button type="button" onClick={()=> {
         handleBookAnother();
+        resetImage();
         navigate("/")}} className="border-2 border-border-color text-border-color rounded-[12px] px-[12px] py-[15px] w-full
      // Hover state
         hover:bg-hover-color
