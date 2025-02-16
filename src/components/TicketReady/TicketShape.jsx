@@ -42,7 +42,7 @@ const selectedTicket = useStoredTicket();
         <img 
         src={imageUrl} 
         alt="Uploaded ticket" 
-        className="w-full border-2 border-border-color rounded-[12px]  "
+        className="w-full border-2 border-border-color rounded-[12px] max-h-[200px] "
       />
             
         </div>
