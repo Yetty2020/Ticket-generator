@@ -16,6 +16,7 @@ export default {
       'ticketbg-color': '#71A7AF',
       'progressbar-color':'#24A0B5',
       'inactiveprogessbar-color':'#0E464F',
+      'gradientbg-color': '#24A0B533'
          
       
 
